@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "project-b"
+version = "0.1.0"
+description = ""
+authors = ["Guillem Ballesteros <guillem@maxwellrules.com>"]
+readme = "README.md"
+packages = [{include = "project_b"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+project_a = { path = "../project_a", develop = true }
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
